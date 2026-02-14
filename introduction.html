@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>A8K60-THPT CMA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family:
+                    "Be Vietnam Pro",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    sans-serif;                margin: 0;
+                background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 30%, #bae6fd 50%, #e0f2fe 100%);
+                min-height: 100vh;
+                color: #334155;
+                line-height: 1.6;
+                display: flex;
+                flex-direction: column;
+            }
+            .main {
+                flex: 1;
+            }
+            .banner {
+                background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(56, 189, 248, 0.2) 50%, rgba(125, 211, 252, 0.35) 100%),
+                url("./images/image6.jpg") bottom center / cover no-repeat;
+                height: 500px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2.75rem;
+                font-weight: 900;
+                text-shadow: 0 5px 0px rgba(0, 0, 4, 2.15);
+                letter-spacing: 0.02em;
+            }
+            .banner h2 {
+                margin: 0;
+                color: inherit;
+            }
+            .slogan {
+                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+                padding: 3rem 1.5rem;
+                border-bottom: 2px solid rgba(14, 165, 233, 0.25);
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .block_3 {
+                flex: 1;
+                min-width: 200px;
+                max-width: 280px;
+                text-align: center;
+                padding: 1.5rem 1.25rem;
+                background: #fff;
+                border-radius: 16px;
+                box-shadow: 0 4px 20px rgba(14, 165, 233, 0.12);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+            .block_3:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 28px rgba(14, 165, 233, 0.2);
+            }
+            .block_3 h4 {
+                margin: 0 0 0.5rem;
+                color: #0c4a6e;
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+            .block_3 .text-content {
+                margin: 0;
+                color: #6b7280;
+                font-size: 0.95rem;
+            }
+            .title {
+                text-align: center;
+                color: #0c4a6e;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 2.5rem 0 2rem;
+            }
+            .title h2 {
+                margin: 0;
+                color: inherit;
+            }
+            .container {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 0 1.25rem 3rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+            .card {
+                background: #fff;
+                width: 100%;
+                min-height: 0;
+                display: flex;
+                align-items: stretch;
+                border-radius: 16px;
+                padding: 10px;
+                gap: 1rem;
+                box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+                border: 1px solid rgba(56, 189, 248, 0.3);
+                transition: box-shadow 0.25s ease, transform 0.2s ease;
+                overflow: hidden;
+            }
+            .card:hover {
+                box-shadow: 0 8px 30px rgba(14, 165, 233, 0.18);
+                transform: translateY(-2px);
+            }
+            .card img {
+                width: 36%;
+                min-width: 120px;
+                object-fit: cover;
+                border-radius: 12px;
+                transition: transform 0.35s ease;
+            }
+            .card:hover img {
+                transform: scale(1.08);
+            }
+            .card-content {
+                padding: 1rem 1rem 1rem 0;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .card h3 {
+                margin: 0 0 0.4rem;
+                color: #0c4a6e;
+                font-size: 1.15rem;
+                font-weight: 700;
+            }
+            .card p {
+                margin: 0;
+                color: #6b7280;
+                font-size: 0.95rem;
+            }
+            .footer {
+                text-align: center;
+                padding: 1rem 1.25rem;
+                background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #7dd3fc 100%);
+                color: #fff;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+            @media (max-width: 900px) {
+                .container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (max-width: 600px) {
+                .container {
+                    grid-template-columns: 1fr;
+                }
+            }
+            @media (max-width: 700px) {
+                .row {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .block_3 {
+                    max-width: 100%;
+                }
+                .card {
+                    flex-direction: column;
+                    min-width: unset;
+                }
+                .card img {
+                    width: 100%;
+                    min-width: unset;
+                    max-height: 200px;
+                    border-radius: 12px 12px 0 0;
+                }
+                .banner {
+                    font-size: 1.4rem;
+                    height: 160px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="banner">
+                <h2>A8K60-THPT CMA</h2>
+            </div>
+            <div class="slogan">
+                <div class="row">
+                    <div class="block_3">
+                        <h4>Lớp 10</h4>
+                        <p class="text-content">GVCN: Nguyễn Thị Thanh Nga</p>
+                    </div>
+                    <div class="block_3">
+                        <h4>Lớp 11</h4>
+                        <p class="text-content">GVCN: Nguyễn Thị Thanh Nga</p>
+                    </div>
+                    <div class="block_3">
+                        <h4>Lớp 12</h4>
+                        <p class="text-content">GVCN: Nguyễn Thị Thanh Nga</p>
+                    </div>
+                </div>
+            </div>
+            <div class="title"><h2>Các thành viên trong lớp</h2></div>
+
+            <div class="container">
+                <div class="card">
+                    <img src="./images/image1.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>Góc học trò</h3>
+                        <p>Bàn học chung, từng trang vở — những buổi ôn bài cùng nhau in mãi trong kí ức.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/image2.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>Giờ ra chơi</h3>
+                        <p>Đá cầu, nói cười rôm rả — thanh âm sân trường một thời không quên.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/image3.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>Mùa thi</h3>
+                        <p>Cùng nhau ôn từng chương, chia sẻ đề cương và động viên nhau từng ngày.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/image4.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>Ngày đầu vào lớp</h3>
+                        <p>Lễ khai giảng, làm quen từng gương mặt — A8K60 bắt đầu từ đó.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/image5.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>Hoạt động lớp</h3>
+                        <p>Dã ngoại, văn nghệ, từng chuyến đi gắn kết thêm tình bạn.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/image6.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>Mái trường CMA</h3>
+                        <p>Nơi gắn kết chúng mình thành một gia đình — mãi nhớ, mãi thương.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">© 2026 Trường THPT CMA - Website A8K60 - Minh Anh</div>
+    </body>
+</html>
